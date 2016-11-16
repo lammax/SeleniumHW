@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="selenium-server-standalone-3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
   </component>
 </module>
