@@ -1,4 +1,4 @@
-package test.java.ru.stqa.training.selenium;
+package ru.stqa.training.selenium;
 
 import org.junit.*;
 import org.openqa.selenium.By;
