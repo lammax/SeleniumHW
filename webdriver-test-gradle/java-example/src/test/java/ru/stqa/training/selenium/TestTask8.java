@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -17,19 +19,18 @@ public class TestTask8 extends TestBase {
         //open url
         driver.get("http://localhost/litecart");
 
-        //get most popular items
-        List<WebElement> prodList = driver.findElements(By.cssSelector("div#box-most-popular div.content ul[class $= products] li"));
-        checkStickerNums(prodList);
+        Collection<String> boxNames = Arrays.asList("box-most-popular", "box-campaigns", "box-latest-products");
 
-        prodList =  driver.findElements(By.cssSelector("div#box-campaigns div.content ul[class $= products] li"));
-        checkStickerNums(prodList);
+        for(String boxName : boxNames) {
+            checkStickerNums(boxName);
+        }
 
-        prodList =  driver.findElements(By.cssSelector("div#box-latest-products div.content ul[class $= products] li"));
-        checkStickerNums(prodList);
     }
 
-    private void checkStickerNums(List<WebElement> wbList) {
-        for (WebElement el : wbList) {
+    private void checkStickerNums(String boxName) {
+        System.out.println("Checking - " + boxName);
+        List<WebElement> prodList = driver.findElements(By.cssSelector("div#" + boxName + " div.content ul[class $= products] li"));
+        for (WebElement el : prodList) {
             int stickerNums = el.findElements(By.cssSelector("div[class ^= sticker]")).size();
             Assert.assertTrue("Ошибка: количество стикеров = " + Integer.toString(stickerNums), stickerNums == 1);
         }
