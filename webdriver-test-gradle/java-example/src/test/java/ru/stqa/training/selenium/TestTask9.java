@@ -11,19 +11,21 @@ import com.google.common.base.Strings;
 
 public class TestTask9 extends TestBase {
     @Test
-    public void coutriesAlphabetTest() throws InterruptedException {
+    public void countriesAlphabetTest() throws InterruptedException {
+
+        System.out.println("Countries Alphabet Test started.");
 
         //open url
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
 
         // login as admin
-        adminLogin();
+//        adminLogin();
 
         List<WebElement> countriesList = driver.findElements(By.cssSelector("form[name = countries_form] tr.row"));
         int nCountries = countriesList.size();
 
         List<String> countryNamesList = countriesList.stream()
-                .map(elt -> getCountryName(elt))
+                .map(elt -> getCountryName(elt, 4))
                 .collect(Collectors.toList());
 
         //print all countries names
@@ -45,7 +47,7 @@ public class TestTask9 extends TestBase {
             List<String> zonesNamesList = driver
                     .findElements(By.cssSelector("table#table-zones tr:not(.header)"))
                     .stream()
-                    .map(elt -> getZoneName(elt))
+                    .map(elt -> getCountryZoneName(elt))
                     .filter(elt -> !Strings.isNullOrEmpty(elt))
                     .collect(Collectors.toList());
 
@@ -63,22 +65,87 @@ public class TestTask9 extends TestBase {
 
         }
 
+        System.out.println("Countries Alphabet Test finished.");
+
     }
 
-    private String getCountryName(WebElement el) {
+    @Test
+    public void geoZonesAlphabetTest() throws InterruptedException {
+
+        System.out.println("GeoZones Alphabet Test started.");
+
+        //open url
+        driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+
+        // login as admin
+        adminLogin();
+
+        List<WebElement> countriesList = driver.findElements(By.cssSelector("form[name = geo_zones_form] tr.row"));
+        int nCountries = countriesList.size();
+
+        List<String> countryNamesList = countriesList.stream()
+                .map(elt -> getCountryName(elt, 2))
+                .collect(Collectors.toList());
+
+        for (int countryIndex = 0; countryIndex < nCountries; countryIndex++) {
+            //click GeoZones
+            driver.findElement(By.cssSelector("ul#box-apps-menu a[href $= 'doc=geo_zones']")).click();
+            //click country
+            driver.findElements(By.cssSelector("form[name = geo_zones_form] tr.row")).get(countryIndex)
+                    .findElement(By.cssSelector("td:nth-child(3) a"))
+                    .click();
+
+            List<String> zonesNamesList = driver
+                    .findElements(By.cssSelector("table#table-zones tr:not(.header):not(.colspan)"))
+                    .stream()
+                    .map(elt -> getGeoZoneName(elt))
+                    .filter(elt -> !Strings.isNullOrEmpty(elt))
+                    .collect(Collectors.toList());
+
+            //check if zones names list sorted
+            if (zonesNamesList.size() > 0) {
+                System.out.println(zonesNamesList);
+                System.out.println(
+                        countryNamesList.get(countryIndex)
+                                + ": is zones list sorted: "
+                                + Boolean.toString(isListSorted(zonesNamesList))
+                );
+            } else {
+                System.out.println(countryNamesList.get(countryIndex) + " has no zones.");
+            }
+        }
+
+        System.out.println("GeoZones Alphabet Test finished.");
+
+    }
+
+    private String getCountryName(WebElement el, int tdN) {
         return el
                 .findElements(By.cssSelector("td"))
-                .get(4)
+                .get(tdN)
                 .findElement(By.cssSelector("a"))
                 .getAttribute("textContent");
     }
 
-    private String getZoneName(WebElement el) {
-        return el
-                .findElements(By.cssSelector("td"))
-                .get(2)
-                .findElement(By.cssSelector("input"))
-                .getAttribute("value");
+    private String getZoneNameCustom(WebElement el, String selector, String attribute) {
+        List<WebElement> tdList = el.findElements(By.cssSelector("td"));
+        if (tdList.size() >= 3) {
+            return tdList
+                    .get(2)
+                    .findElement(By.cssSelector(selector))
+                    .getAttribute(attribute);
+        } else {
+            return null;
+        }
+    }
+
+    private String getCountryZoneName(WebElement el) {
+        return getZoneNameCustom(el, "input", "value");
+    }
+
+    private String getGeoZoneName(WebElement el) {
+        return getZoneNameCustom(el, "option[selected=selected]", "textContent");
+
     }
 
     private boolean isListSorted(List<String> list) {
@@ -89,7 +156,4 @@ public class TestTask9 extends TestBase {
                 .equals(list);
     }
 
-    private boolean isNotEmpty(String s) {
-        return s != null && !s.trim().isEmpty();
-    }
 }
