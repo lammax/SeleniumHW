@@ -24,6 +24,12 @@ public class TestBase {
         }
     }
 
+    public void adminLogin() {
+        driver.findElement(By.cssSelector("div.content input[name=username]")).sendKeys("admin");
+        driver.findElement(By.cssSelector("div.content input[name=password]")).sendKeys("admin");
+        driver.findElement(By.cssSelector("form[name=login_form] button[name=login]")).click();
+    }
+
     @Before
     public void start() {
         if (tlDriver.get() != null) {
