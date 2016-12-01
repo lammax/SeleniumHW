@@ -39,7 +39,7 @@ public class TestBase {
         driver.findElement(By.cssSelector("div#box-account a[href $= logout]")).click();
     }
 
-    /*public void unhideElement(WebDriver driver, WebElement element) {
+    public void unhideElement(WebDriver driver, WebElement element) {
         String script = "arguments[0].style.opacity=1;"
                 + "arguments[0].style['transform']='translate(0px, 0px) scale(1)';"
                 + "arguments[0].style['MozTransform']='translate(0px, 0px) scale(1)';"
@@ -48,7 +48,7 @@ public class TestBase {
                 + "arguments[0].style['OTransform']='translate(0px, 0px) scale(1)';"
                 + "return true;";
         ((JavascriptExecutor) driver).executeScript(script, element);
-    }*/
+    }
 
     @Before
     public void start() {
