@@ -5,7 +5,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Set;
 
 public class TestBase {
 
@@ -48,6 +51,14 @@ public class TestBase {
                 + "arguments[0].style['OTransform']='translate(0px, 0px) scale(1)';"
                 + "return true;";
         ((JavascriptExecutor) driver).executeScript(script, element);
+    }
+
+    public ExpectedCondition<String> anyWindowOtherThan(Set<String> oldWindows) {
+        return input -> {
+            Set<String> handles = driver.getWindowHandles();
+            handles.removeAll(oldWindows);
+            return handles.size() > 0 ? handles.iterator().next() : null;
+        };
     }
 
     @Before
