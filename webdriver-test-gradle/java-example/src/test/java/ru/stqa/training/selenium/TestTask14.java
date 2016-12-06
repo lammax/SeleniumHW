@@ -39,7 +39,7 @@ public class TestTask14 extends TestBase {
         //open any country for editing
         openAnyCountry();
 
-        //check if new windows appearing
+        //check if new windows are appearing
         checkNewWindows();
 
         System.out.println("New window test finished.");
@@ -71,7 +71,7 @@ public class TestTask14 extends TestBase {
         List<WebElement> externalLinks = driver.findElements(By.cssSelector("td#content > form > table a[target='_blank']"));
         int nExtLinks = externalLinks.size();
 
-        //in cycle lets click every external link, switch to new window, then close it and come back to out original window
+        //in cycle lets click every external link, switch to new window, then close it and come back to our original window
         for(int iExtLink = 0; iExtLink < nExtLinks; iExtLink++) {
             driver.findElements(By.cssSelector("td#content > form > table a[target='_blank']")).get(iExtLink).click();
             String newWindow = wait.until(anyWindowOtherThan(existingWindows));
