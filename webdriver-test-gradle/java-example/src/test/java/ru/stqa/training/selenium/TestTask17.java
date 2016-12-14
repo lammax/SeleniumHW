@@ -65,7 +65,7 @@ public class TestTask17 extends TestBase {
                     .logs()
                     .get("browser")
                     .filter(Level.WARNING)
-                    .forEach(logEntry -> System.out.println(logEntry));
+                    .forEach(logEntry -> sftA.fail(logEntry.toString()));
 
 
             driver.navigate().back();

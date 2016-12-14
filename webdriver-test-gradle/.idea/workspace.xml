@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf19dc72-4a2f-4df5-bb22-397124e5b67d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_core_3_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/java-example_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/java-example_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-example/build.gradle" afterPath="$PROJECT_DIR$/java-example/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java" afterPath="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask17.java" afterPath="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask17.java" />
     </list>
     <ignored path="webdriver-test-gradle.iws" />
@@ -93,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="26" />
+            <state relative-caret-position="289">
+              <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,11 +110,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestTask17.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-example/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTask17.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask17.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="63" column="27" lean-forward="true" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+            <state relative-caret-position="442">
+              <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -307,7 +322,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/java-example" value="2959690546377" />
+        <entry key="$PROJECT_DIR$/java-example" value="2961006575071" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -467,14 +482,14 @@
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/LitecartLogin.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask7.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask8.java" />
-        <option value="$PROJECT_DIR$/java-example/build.gradle" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask9.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask10.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask11.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask12.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask13.java" />
-        <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask14.java" />
+        <option value="$PROJECT_DIR$/java-example/build.gradle" />
+        <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java" />
         <option value="$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask17.java" />
       </list>
     </option>
@@ -971,15 +986,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTask14 - 2016.12.06 at 19h 28m 43s.xml">
-      <configuration name="TestTask14" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTask14 - 2016.12.06 at 19h 29m 41s.xml">
-      <configuration name="TestTask14" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTask14 - 2016.12.06 at 19h 30m 19s.xml">
-      <configuration name="TestTask14" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestTask14 - 2016.12.14 at 18h 22m 58s.xml">
       <configuration name="TestTask14" configurationId="JUnit" />
     </history-entry>
@@ -1001,6 +1007,15 @@
     <history-entry file="TestTask17 - 2016.12.14 at 20h 11m 03s.xml">
       <configuration name="TestTask17" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestTask17 - 2016.12.14 at 20h 37m 19s.xml">
+      <configuration name="TestTask17" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTask17 - 2016.12.14 at 20h 38m 26s.xml">
+      <configuration name="TestTask17" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTask17 - 2016.12.14 at 20h 49m 33s.xml">
+      <configuration name="TestTask17" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1016,7 +1031,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27282608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27173913" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1240,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-example/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/InvokeMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1418,16 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.0.1/8ec7d0a8bab6b2502d48d784a4f6a6625dc1b62b/selenium-api-3.0.1-sources.jar!/org/openqa/selenium/logging/Logs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -1452,10 +1449,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/java-example/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestTask17.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="63" column="27" lean-forward="true" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+        <state relative-caret-position="442">
+          <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
