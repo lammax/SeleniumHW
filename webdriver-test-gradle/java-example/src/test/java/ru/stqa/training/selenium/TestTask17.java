@@ -70,8 +70,6 @@ public class TestTask17 extends TestBase {
 
             driver.navigate().back();
         }
-
-        System.out.println("checkProductPagesErrors");
     }
 
 }
