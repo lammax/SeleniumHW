@@ -1,11 +1,8 @@
 package ru.stqa.training.selenium;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.logging.Level;
 public class TestTask17 extends TestBase {
 
     @Test
-    public void bucketAddproductsTest() throws InterruptedException {
+    public void productPageErrorsTest() throws InterruptedException {
 
 /*
        Сделайте сценарий, который проверяет, не появляются ли сообщения об ошибках при открытии страниц в учебном приложении, а именно -- страниц товаров в каталоге в административной панели.
