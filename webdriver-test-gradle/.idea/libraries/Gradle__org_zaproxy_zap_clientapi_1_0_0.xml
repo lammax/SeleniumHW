@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.zaproxy:zap-clientapi:1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zaproxy/zap-clientapi/1.0.0/220ab4db3afc60b3c465a36c44d8f9bc624f5f24/zap-clientapi-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zaproxy/zap-clientapi/1.0.0/6f5c748ae3cf1f8df511870b5974e99a85b9b972/zap-clientapi-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

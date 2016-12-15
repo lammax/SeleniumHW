@@ -6,6 +6,8 @@ import org.junit.ClassRule;
 import org.junit.rules.ExternalResource;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,13 +18,21 @@ public class TestBase {
     protected static WebDriver driver = null;
     protected static WebDriverWait wait = null;
     protected static SoftAssertions sftA = null;
+    protected static Proxy proxy = null;
 
     @ClassRule
     public static ExternalResource driverRule = new ExternalResource() {
         @Override
         protected void before() throws Throwable {
             System.out.println("Starting Chrome browser");
-            driver = new ChromeDriver();
+
+            proxy = new Proxy();
+            proxy.setHttpProxy("localhost:8090");
+
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability(CapabilityType.PROXY, proxy);
+
+            driver = new ChromeDriver(capabilities);
             wait = new WebDriverWait(driver, 10);
             sftA = new SoftAssertions();
         }
@@ -34,6 +44,7 @@ public class TestBase {
                 driver.quit();
                 driver = null;
                 wait = null;
+                proxy = null;
                 sftA.assertAll();
             }
         }
