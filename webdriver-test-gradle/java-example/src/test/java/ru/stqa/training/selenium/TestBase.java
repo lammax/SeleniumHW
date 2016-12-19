@@ -32,7 +32,7 @@ public class TestBase {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.PROXY, proxy);
 
-            driver = new ChromeDriver(capabilities);
+            driver = new ChromeDriver(/*capabilities*/);
             wait = new WebDriverWait(driver, 10);
             sftA = new SoftAssertions();
         }
